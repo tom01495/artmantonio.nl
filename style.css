@@ -8,6 +8,7 @@
 	font-size: 2vh;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
+	text-shadow: 0 0 2px white, 0 0 5px var(--title-color);
 	
 	/* SIZE */
 	min-height: 100%;
@@ -17,7 +18,7 @@ body {
 	margin: 0;
 }
 
-h1 {
+.header { /* HEADER */
 	margin: 0;
 	width: 100%;
 	
@@ -26,19 +27,28 @@ h1 {
 	right 0;
 	
 	text-align: center;
-	text-transform: uppercase;
-	text-shadow: 1px 1px black;
-	
 	background-color: var(--title-color);
+
+	* { /* ELEMENTS IN HEADER */
+		text-transform: uppercase;
+
+		margin: 0;
+	}
 }
 
 .main {
 	max-width: 600px;
 	margin: auto;
-	margin-top: 30vh;
+	margin-top: 10vh;
 	padding: 10px 50px;
 	
 	background-color: var(--front-color);
-	border: 0 solid var(--front-color);
-	border-radius: 20px;
+	border-radius: 30px;
+}
+
+.chapter {
+	h2 { /* CHAPTER TITLE */
+		background-color: var(--title-color);
+		border-radius: 30px;
+	}
 }
