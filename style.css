@@ -1,14 +1,21 @@
 :root {
 	/* COLORS */
 	background-color: white;
-	--title-color: BurlyWood;
-	--front-color: BlanchedAlmond;
+	--main-color: BlanchedAlmond;
+	--main2-color: OldLace;
+	--back-color: Tan;
+
+	--shadow-color: BlanchedAlmond;
 
 	/* FONT */
 	font-size: 2vh;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
-	text-shadow: 0 0 2px white, 0 0 5px var(--title-color);
+	text-shadow: -0.1vh -0.1vh var(--shadow-color),
+				 -0.1vh  0.1vh var(--shadow-color),
+				  0.1vh -0.1vh var(--shadow-color),
+				  0.1vh  0.1vh var(--shadow-color);
+	color: black;
 	
 	/* SIZE */
 	min-height: 100%;
@@ -20,14 +27,16 @@ body {
 
 .header { /* HEADER */
 	margin: 0;
-	width: 100%;
+	width: calc(100%);
 	
 	position: fixed;
 	top: 0;
 	right 0;
 	
 	text-align: center;
-	background-color: var(--title-color);
+	background-color: var(--back-color);
+	border: 3px none var(--main-color);
+	border-bottom-style: solid;
 
 	* { /* ELEMENTS IN HEADER */
 		text-transform: uppercase;
@@ -38,17 +47,26 @@ body {
 
 .main {
 	max-width: 600px;
+	min-width: 40mm;
 	margin: auto;
 	margin-top: 10vh;
 	padding: 10px 50px;
 	
-	background-color: var(--front-color);
+	background-color: var(--main-color);
 	border-radius: 30px;
 }
 
 .chapter {
+	margin-top: 20px;
+
+	background-color: var(--main2-color);
+	border: 5px solid var(--back-color);
+	border-radius: 36px;
+
 	h2 { /* CHAPTER TITLE */
-		background-color: var(--title-color);
-		border-radius: 30px;
+		margin: 0;
+
+		background-color: var(--back-color);
+		border-radius: 30px 30px 0 0;
 	}
 }
